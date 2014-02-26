@@ -1,0 +1,6 @@
+---
+- name: Install rake
+  sudo: True
+  apt: pkg={{item}} state=installed
+  with_items:
+    - rake

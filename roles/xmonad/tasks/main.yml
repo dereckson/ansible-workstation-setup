@@ -1,0 +1,7 @@
+---
+- name: Install XMonad
+  sudo: True
+  apt: pkg={{item}} state=installed
+  with_items:
+    - xmonad
+    - xmobar

@@ -1,0 +1,15 @@
+---
+- name: Install PEAR
+  sudo: True
+  apt: pkg=php-pear state=installed
+
+- name: Do we need to auto discover channels?
+  sudo: True
+  command: pear config-get auto_discover
+  register: pear_auto_discover
+  changed_when: None # This should never flag a change
+
+- name: Set PEAR up to auto-discover channels
+  sudo: True
+  command: pear config-set auto_discover 1
+  when: pear_auto_discover.stdout == "0"

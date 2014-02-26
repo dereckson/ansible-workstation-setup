@@ -1,0 +1,6 @@
+---
+- name: Install Composer
+  sudo: True
+  copy: src=composer.phar dest=/usr/local/bin/composer owner=root group=root mode=0644
+
+

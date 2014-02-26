@@ -1,0 +1,16 @@
+---
+- name: Install Vim
+  sudo: True
+  apt: pkg=vim state=installed
+
+- name: Install Git
+  sudo: True
+  apt: pkg=git-core state=installed
+
+- name: Install cURL
+  sudo: True
+  apt: pkg=curl state=installed
+
+- { include: zsh.yml, tags: ['zsh', 'cli'] }
+- { include: dropbox.yml, tags: ['gui', 'dropbox'] }
+- { include: google-chrome.yml, tags: ['gui', 'google'] }

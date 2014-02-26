@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars:
+    login_user: michael
+    os_name: saucy
+  roles:
+    - { role: common, tags: ['common', 'core'] }
+    - { role: dotfiles, tags: ['dotfiles', 'core'] }
+    - { role: xmonad, tags: ['xmonad', 'core'] }
+    - { role: php, tags: ['php', 'dev'] }
+    - { role: mysql, tags: ['mysql', 'dev'] }
