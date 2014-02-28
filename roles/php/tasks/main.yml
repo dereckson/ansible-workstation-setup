@@ -2,4 +2,5 @@
 - { include: php.yml, tags: ['packages'] }
 - { include: pear.yml, tags: ['pear'] }
 - { include: composer.yml, tags: ['composer'] }
+- { include: apc.yml, tags: ['apc'] }
 
