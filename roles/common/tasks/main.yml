@@ -16,7 +16,10 @@
   apt: pkg={{item}} state=installed
   with_items:
     - tree
+    - feh
+    - xclip
 
 - { include: zsh.yml, tags: ['zsh', 'cli'] }
 - { include: dropbox.yml, tags: ['gui', 'dropbox'] }
 - { include: google-chrome.yml, tags: ['gui', 'google'] }
+- { include: hubflow.yml, tags: ['hubflow','git'] }

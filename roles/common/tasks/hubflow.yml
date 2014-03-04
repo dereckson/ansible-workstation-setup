@@ -1,0 +1,25 @@
+---
+# Based on https://raw.github.com/stuartherbert/ansible-playbooks/develop/roles/dev-environment/tasks/hubflow.yml
+
+- name: check if hubflow already installed
+  command: git hf version
+  register: hubflow_version
+  ignore_errors: True
+
+- name: create the folder to clone gitflow into
+  file: path={{hubflow_folder}} state=directory
+  sudo: False
+
+- name: check for existing hubflow repo
+  command: ls {{hubflow_folder}}
+  register: hubflow_ls
+
+- name: clone the hubflow repo
+  git: repo=git@github.com:datasift/gitflow.git dest={{hubflow_folder}} version=develop
+  sudo: False
+  when: "'gitflow' not in hubflow_ls.stdout"
+
+- name: install gitflow
+  command: ./install.sh chdir={{hubflow_folder}}
+  sudo: True
+  when: "'latest version' not in hubflow_version.stdout"

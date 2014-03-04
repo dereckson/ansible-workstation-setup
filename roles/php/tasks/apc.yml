@@ -1,0 +1,8 @@
+--- 
+- name: Install APCu
+  sudo: True
+  command: pecl install apcu-beta
+
+- name: Info message
+  debug: msg="Make sure to add 'extension=apcu.so' to your php.ini"
+

@@ -5,3 +5,6 @@
   with_items:
     - xmonad
     - xmobar
+    - i3lock
+    - suckless-tools
+    - trayer
