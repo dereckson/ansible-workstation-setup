@@ -3,6 +3,6 @@
   sudo: True
   command: pecl install apcu-beta
 
-- name: Info message
-  debug: msg="Make sure to add 'extension=apcu.so' to your php.ini"
-
+- name: Add APCu
+  sudo: True
+  copy: content="apcu.so" dest=/etc/php5/cli/conf.d/20-apcu.ini

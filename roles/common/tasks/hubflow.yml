@@ -15,7 +15,7 @@
   register: hubflow_ls
 
 - name: clone the hubflow repo
-  git: repo=git@github.com:datasift/gitflow.git dest={{hubflow_folder}} version=develop
+  git: repo=http://github.com/datasift/gitflow.git dest={{hubflow_folder}} version=develop accept_hostkey=True
   sudo: False
   when: "'gitflow' not in hubflow_ls.stdout"
 
