@@ -12,4 +12,5 @@
     - { role: mysql, tags: ['mysql', 'dev'] }
     - { role: nodejs, tags: ['nodejs', 'dev'] }
     - { role: vagrant, tags: ['vagrant', 'dev'] }
+    - { role: spotify, tags: ['spotify'] }
     - { role: datasift, tags: ['datasift'] }
