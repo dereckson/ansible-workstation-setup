@@ -1,0 +1,9 @@
+---
+
+- name: Install nodejs
+  sudo: True
+  apt: pkg=nodejs state=installed update_cache=yes
+
+- name: Symlink nodejs to node
+  sudo: True
+  command: ln -s /usr/bin/nodejs /usr/bin/node

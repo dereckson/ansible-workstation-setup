@@ -1,0 +1,12 @@
+---
+
+- name: Add Virtualbox repo
+  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian trusty contrib' state=present
+  sudo: True
+
+- name: Install Virtualbox + Vagrant
+  sudo: True
+  apt: pkg={{item}} state=installed update_cache=yes
+  with_items:
+    - virtualbox
+    - vagrant

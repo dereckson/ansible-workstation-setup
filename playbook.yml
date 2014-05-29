@@ -4,8 +4,12 @@
     login_user: michael
     os_name: saucy
   roles:
-    - { role: common, tags: ['common', 'core'] }
-    - { role: dotfiles, tags: ['dotfiles', 'core'] }
+    - { role: common, tags: ['firstrun', 'common', 'core'] }
+    - { role: dotfiles, tags: ['firstrun', 'dotfiles', 'core'] }
+# Anything after this assumes that I have a valid SSH key + my dotfiles installed
     - { role: xmonad, tags: ['xmonad', 'core'] }
     - { role: php, tags: ['php', 'dev'] }
     - { role: mysql, tags: ['mysql', 'dev'] }
+    - { role: nodejs, tags: ['nodejs', 'dev'] }
+    - { role: vagrant, tags: ['vagrant', 'dev'] }
+    - { role: datasift, tags: ['datasift'] }
