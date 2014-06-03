@@ -1,0 +1,5 @@
+---
+
+- name: Install memcached
+  sudo: True
+  apt: pkg=memcached state=installed

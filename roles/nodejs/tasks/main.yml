@@ -2,7 +2,11 @@
 
 - name: Install nodejs
   sudo: True
-  apt: pkg=nodejs state=installed update_cache=yes
+  apt: pkg=nodejs state=installed
+
+- name: Install npm
+  sudo: True
+  apt: pkg=npm state=installed
 
 - name: Symlink nodejs to node
   sudo: True

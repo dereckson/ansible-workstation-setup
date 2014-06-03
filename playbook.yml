@@ -11,6 +11,10 @@
     - { role: php, tags: ['php', 'dev'] }
     - { role: mysql, tags: ['mysql', 'dev'] }
     - { role: nodejs, tags: ['nodejs', 'dev'] }
+    - { role: golang, tags: ['golang', 'dev'] }
+    - { role: zeromq, tags: ['zeromq', 'dev'] }
+    - { role: memcached, tags: ['memcached', 'dev'] }
+    - { role: redis, tags: ['redis', 'dev'] }
     - { role: vagrant, tags: ['vagrant', 'dev'] }
     - { role: spotify, tags: ['spotify'] }
     - { role: datasift, tags: ['datasift'] }

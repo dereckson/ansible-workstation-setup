@@ -1,0 +1,5 @@
+---
+
+- name: Install libzmq
+  sudo: True
+  apt: pkg=libzmq3-dev state=installed
