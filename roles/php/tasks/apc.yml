@@ -5,4 +5,4 @@
 
 - name: Add APCu
   sudo: True
-  copy: content="apcu.so" dest=/etc/php5/cli/conf.d/20-apcu.ini
+  copy: content="apc.enable_cli=1\nextension=apcu.so" dest=/etc/php5/cli/conf.d/20-apcu.ini

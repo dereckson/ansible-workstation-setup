@@ -18,6 +18,8 @@
   sudo: True
   apt: pkg={{item}} state=installed
   with_items:
+    - screen
+    - tmux
     - tree
     - feh
     - xclip
