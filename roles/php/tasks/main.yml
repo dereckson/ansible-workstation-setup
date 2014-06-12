@@ -3,4 +3,5 @@
 - { include: pear.yml, tags: ['pear'] }
 - { include: composer.yml, tags: ['composer'] }
 - { include: apc.yml, tags: ['apc'] }
+- { include: redis.yml, tags: ['redis'] }
 

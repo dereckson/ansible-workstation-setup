@@ -1,0 +1,8 @@
+--- 
+- name: Install Redis
+  sudo: True
+  command: pecl install redis
+
+- name: Add Redis
+  sudo: True
+  copy: content="extension=redis.so" dest=/etc/php5/cli/conf.d/20-redis.ini
