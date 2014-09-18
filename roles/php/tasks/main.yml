@@ -3,5 +3,6 @@
 - { include: pear.yml, tags: ['pear'] }
 - { include: composer.yml, tags: ['composer'] }
 - { include: apc.yml, tags: ['apc'] }
+- { include: memcached.yml, tags: ['memcached'] }
 - { include: redis.yml, tags: ['redis'] }
 

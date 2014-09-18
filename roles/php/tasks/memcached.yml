@@ -1,0 +1,8 @@
+--- 
+- name: Install memcached
+  sudo: True
+  command: pecl install memcached
+
+- name: Add memcached
+  sudo: True
+  copy: content="extension=memcached.so" dest=/etc/php5/cli/conf.d/20-memcached.ini

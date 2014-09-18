@@ -1,0 +1,8 @@
+---
+
+- name: Download .deb
+  command: wget -O /tmp/sbt.deb https://dl.bintray.com/sbt/debian/sbt-0.13.6.deb
+
+- name: Install .deb
+  sudo: True
+  apt: deb=/tmp/sbt.deb
