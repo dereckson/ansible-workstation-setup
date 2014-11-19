@@ -2,7 +2,7 @@
 - hosts: all
   vars:
     login_user: michael
-    os_name: saucy
+    os_name: utopic
   roles:
     - { role: common, tags: ['firstrun', 'common', 'core'] }
     - { role: dotfiles, tags: ['firstrun', 'dotfiles', 'core'] }

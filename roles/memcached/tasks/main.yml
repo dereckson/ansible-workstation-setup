@@ -1,5 +1,9 @@
 ---
 
+- name: Install libmemcached
+  sudo: True
+  apt: pkg=libmemcached-dev state=installed
+
 - name: Install memcached
   sudo: True
   apt: pkg=memcached state=installed

@@ -3,6 +3,10 @@
 - name: Download .deb
   command: wget -O /tmp/sbt.deb https://dl.bintray.com/sbt/debian/sbt-0.13.6.deb
 
+- name: Install openjdk-7
+  sudo: True
+  apt: name=openjdk-7-jre-headless state=installed
+
 - name: Install .deb
   sudo: True
   apt: deb=/tmp/sbt.deb
