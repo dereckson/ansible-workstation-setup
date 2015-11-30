@@ -1,7 +1,7 @@
 --- 
 - name: Install APCu
   sudo: True
-  command: pecl install apcu-beta
+  command: pecl install apcu
 
 - name: Add APCu
   sudo: True
